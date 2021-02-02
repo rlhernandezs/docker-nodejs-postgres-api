@@ -10,6 +10,8 @@ RUN npm ci
 
 COPY . /home/app
 
+RUN npm config set unsafe-perm true
+
 RUN npm install -g nodemon && npm install
 
 # CMD ./scripts/start.sh
